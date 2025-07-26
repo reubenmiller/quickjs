@@ -22,12 +22,12 @@
  * THE SOFTWARE.
  */
 
-#if (defined(__GNUC__) || defined(__GNUG__)) && !defined(__clang__)
-   // Use GCC builtins for version < 4.9
-#  if((__GNUC__ << 16) + __GNUC_MINOR__ < ((4) << 16) + 9)
-#    define GCC_BUILTIN_ATOMICS
-#  endif
-#endif
+// #if (defined(__GNUC__) || defined(__GNUG__)) && !defined(__clang__)
+//    // Use GCC builtins for version < 4.9
+// #  if((__GNUC__ << 16) + __GNUC_MINOR__ < ((4) << 16) + 9)
+// #    define GCC_BUILTIN_ATOMICS
+// #  endif
+// #endif
 
 #ifdef GCC_BUILTIN_ATOMICS
 #define atomic_fetch_add(obj, arg) \
